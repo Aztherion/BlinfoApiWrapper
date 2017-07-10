@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using BlInfoApiWrapper.Communication;
@@ -13,9 +14,11 @@ namespace BlInfoApiWrapper.Stores
         private BaseRestClient _client;
         public CommonStore() : this(string.Empty) { }
 
-        public CommonStore(string accessToken)
+        public CommonStore(string accessToken) : this(accessToken, String.Empty) { }
+
+        public CommonStore(string accessToken, string userKey)
         {
-            _client = new BaseRestClient(accessToken);
+            _client = new BaseRestClient(accessToken, userKey);
         }
 
         public async Task<string> ConnectAsync(string clientId, string clientSecret)

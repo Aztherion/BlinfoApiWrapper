@@ -12,6 +12,7 @@
         internal const string ArticleAccountPath = "article/account";
         internal const string AccountPath = "account";
         internal const string CostBearerPath = "costbearer";
+        internal const string CustomerPath = "customer";
         internal const string CustomerInvoicePath = "customerinvoice";
         internal const string CustomerInvoiceDatePath = "customerinvoice/date";
         internal const string CustomerInvoiceDueDatePath = "customerinvoice/dueDate";
@@ -24,5 +25,6 @@
         internal const string OrderPath = "order";
         internal const string OrderTypePath = "order/type";
         internal const string OrderAllPath = "order/all";
+        internal const string DocumentPath = "document";
     }
 }

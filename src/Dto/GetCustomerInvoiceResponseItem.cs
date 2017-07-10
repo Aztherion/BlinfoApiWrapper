@@ -28,7 +28,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "dueDate")]
         public string DueDate { get; set; }
         [JsonProperty(PropertyName = "externalInvoiceId")]
-        public int ExternalInvoiceId { get; set; }
+        public int? ExternalInvoiceId { get; set; }
         [JsonProperty(PropertyName = "invoiceDate")]
         public string InvoiceDate { get; set; }
         [JsonProperty(PropertyName = "invoiceNumber")]
@@ -54,7 +54,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "registeredByUser")]
         public string RegisteredByUser { get; set; }
         [JsonProperty(PropertyName = "type")]
-        public int Type { get; set; }
+        public string Type { get; set; }
 
         public GetCustomerInvoiceResponseItem()
         {
@@ -69,6 +69,7 @@ namespace BlInfoApiWrapper.Dto
             JournalId = string.Empty;
             ReceivableAccount = string.Empty;
             RegisteredByUser = string.Empty;
+            Type = string.Empty;
         }
     }
 }
