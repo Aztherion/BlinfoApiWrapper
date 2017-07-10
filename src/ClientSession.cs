@@ -6,6 +6,7 @@ namespace BlInfoApiWrapper
     {
         private readonly AuthenticationSession _authenticationSession;
         private readonly string _userKey;
+		private CommonStore _commonStore;
         private AccountStore _accountStore;
         private ArticleStore _articleStore;
         private CostBearerStore _costBearerStore;
@@ -16,6 +17,7 @@ namespace BlInfoApiWrapper
         private SupplierInvoiceStore _supplierInvoiceStore;
         private SupplierStore _supplierStore;
 
+		public CommonStore CommonStore => _commonStore ?? (_commonStore = new CommonStore(_authenticationSession.AccessToken));
         public AccountStore AccountStore => _accountStore ?? (_accountStore = new AccountStore(_authenticationSession.AccessToken, _userKey));
         public ArticleStore ArticleStore => _articleStore ?? (_articleStore = new ArticleStore(_authenticationSession.AccessToken, _userKey));
         public CostBearerStore CostBearerStore => _costBearerStore ?? (_costBearerStore = new CostBearerStore(_authenticationSession.AccessToken, _userKey));
