@@ -56,7 +56,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "invoiceDueDate")]
         public string InvoiceDueDate { get; set; }
         [JsonProperty(PropertyName = "invoiceNumber")]
-        public int InvoiceNumber { get; set; }
+        public int? InvoiceNumber { get; set; }
         [JsonProperty(PropertyName = "invoicingBlocked")]
         public bool InvoicingBlocked { get; set; }
         [JsonProperty(PropertyName = "lines")]

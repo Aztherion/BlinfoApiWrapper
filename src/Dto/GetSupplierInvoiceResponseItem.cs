@@ -38,7 +38,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "dueDate")]
         public string DueDate { get; set; }
         [JsonProperty(PropertyName = "externalInvoiceId")]
-        public int ExternalInvoiceId { get; set; }
+        public int? ExternalInvoiceId { get; set; }
         [JsonProperty(PropertyName = "externalWatch")]
         public bool ExternalWatch { get; set; }
         [JsonProperty(PropertyName = "invoiceDate")]
