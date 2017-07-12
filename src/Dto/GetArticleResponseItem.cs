@@ -10,7 +10,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "account")]
         public string Account { get; set; }
         [JsonProperty(PropertyName = "availableStock")]
-        public string AvailableStock { get; set; }
+        public int AvailableStock { get; set; }
         [JsonProperty(PropertyName = "barcode")]
         public string Barcode { get; set; }
         [JsonProperty(PropertyName = "closed")]
