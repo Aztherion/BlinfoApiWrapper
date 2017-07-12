@@ -18,8 +18,12 @@ namespace BlInfoApiWrapper.Stores
 
         public async Task<IEnumerable<GetCustomerResponseItem>> GetAllAsync()
         {
-            //return await _client.GetAsync<GetCustomerResponseItem>(ApiControllers.CustomerPath);
-            throw new NotImplementedException("Customer controller not yet implemented in BL Info API");
+            return await _client.GetAsync<GetCustomerResponseItem>(ApiControllers.CustomerPath);
+        }
+
+        public async Task<GetCustomerResponseItem> GetSingleAsync(string id)
+        {
+            return await _client.GetSingleAsync<GetCustomerResponseItem>($"{ApiControllers.CustomerPath}/{id}");
         }
     }
 }
