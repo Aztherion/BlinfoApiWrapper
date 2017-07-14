@@ -18,6 +18,7 @@ namespace BlInfoApiWrapper
         private SupplierInvoiceStore _supplierInvoiceStore;
         private SupplierStore _supplierStore;
         private DocumentStore _documentStore;
+        private DetailsStore _detailsStore;
 
 		public CommonStore CommonStore => _commonStore ?? (_commonStore = new CommonStore(_authenticationSession.AccessToken, _userKey));
         public AccountStore AccountStore => _accountStore ?? (_accountStore = new AccountStore(_authenticationSession.AccessToken, _userKey));
@@ -31,6 +32,7 @@ namespace BlInfoApiWrapper
         public SupplierInvoiceStore SupplierInvoiceStore => _supplierInvoiceStore ?? (_supplierInvoiceStore = new SupplierInvoiceStore(_authenticationSession.AccessToken, _userKey));
         public SupplierStore SupplierStore => _supplierStore ?? (_supplierStore = new SupplierStore(_authenticationSession.AccessToken, _userKey));
         public DocumentStore DocumentStore => _documentStore ?? (_documentStore = new DocumentStore(_authenticationSession.AccessToken, _userKey));
+        public DetailsStore DetailsStore => _detailsStore ?? (_detailsStore = new DetailsStore(_authenticationSession.AccessToken, _userKey));
 
         public ClientSession(AuthenticationSession authenticationSession, string clientPublicKey)
         {

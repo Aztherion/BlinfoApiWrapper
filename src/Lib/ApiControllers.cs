@@ -26,5 +26,6 @@
         internal const string OrderTypePath = "order/type";
         internal const string OrderAllPath = "order/all";
         internal const string DocumentPath = "document";
+        internal const string DetailsPath = "details";
     }
 }
