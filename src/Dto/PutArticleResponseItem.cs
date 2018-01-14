@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace BlInfoApiWrapper.Dto
 {
-    public class GetArticleResponseItem
+    public class PutArticleResponseItem
     {
         [JsonProperty(PropertyName = "account")]
         public string Account { get; set; }
@@ -72,8 +72,7 @@ namespace BlInfoApiWrapper.Dto
         public decimal Volume { get; set; }
         [JsonProperty(PropertyName = "weight")]
         public decimal Weight { get; set; }
-
-        public GetArticleResponseItem()
+        public PutArticleResponseItem()
         {
             Account = string.Empty;
             Barcode = string.Empty;

@@ -25,6 +25,17 @@ namespace BlInfoApiWrapper.Communication
             _userKey = userKey;
         }
 
+        public async Task<T> PutAsync<T>(object o, string path)
+        {
+            using (var client = GetClient())
+            {
+                var response = await client.PutAsync(GetUrl(path), new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8));
+                var json = await response.Content.ReadAsStringAsync();
+                if (IsErrorJson(json)) throw GetExceptionFromJson(json);
+                return JsonConvert.DeserializeObject<T>(json);
+            }
+        }
+
         public async Task DeleteAsync(string path)
         {
             using (var client = GetClient())

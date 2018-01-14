@@ -2,7 +2,7 @@
 
 namespace BlInfoApiWrapper.Dto
 {
-    public class GetAccountResponseItem
+    public class PostAccountRequestItem
     {
         [JsonProperty(PropertyName = "closed")]
         public bool Closed { get; set; }
@@ -19,7 +19,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "vatCode")]
         public string VatCode { get; set; }
 
-        public GetAccountResponseItem()
+        public PostAccountRequestItem()
         {
             Comment = string.Empty;
             Id = string.Empty;

@@ -24,5 +24,15 @@ namespace BlInfoApiWrapper.Stores
         {
             return await _client.GetSingleAsync<GetCostBearerResponseItem>($"{ApiControllers.CostBearerPath}/{id}");
         }
+
+        public async Task<PostCostBearerResponseItem> Post(PostCostBearerRequestItem item)
+        {
+            return await _client.PostAsync<PostCostBearerResponseItem>(item, ApiControllers.CostBearerPath);
+        }
+
+        public async Task<PutCostBearerResponseItem> Put(PutCostBearerRequestItem item)
+        {
+            return await _client.PutAsync<PutCostBearerResponseItem>(item, ApiControllers.CostBearerPath);
+        }
     }
 }

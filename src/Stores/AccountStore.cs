@@ -24,5 +24,15 @@ namespace BlInfoApiWrapper.Stores
         {
             return await _client.GetSingleAsync<GetAccountResponseItem>($"{ApiControllers.AccountPath}/{id}");
         }
+
+        public async Task<PostAccountResponseItem> Post(PostAccountRequestItem item)
+        {
+            return await _client.PostAsync<PostAccountResponseItem>(item, $"{ApiControllers.AccountPath}");
+        }
+
+        public async Task<PutAccountResponseItem> Put(PutAccountRequestItem item)
+        {
+            return await _client.PutAsync<PutAccountResponseItem>(item, $"{ApiControllers.AccountPath}");
+        }
     }
 }

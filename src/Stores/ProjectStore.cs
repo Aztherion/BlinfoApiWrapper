@@ -24,5 +24,15 @@ namespace BlInfoApiWrapper.Stores
         {
             return await _client.GetSingleAsync<GetProjectResponseItem>($"{ApiControllers.ProjectPath}/{id}");
         }
+
+        public async Task<PostProjectResponseItem> Post(PostProjectRequestItem item)
+        {
+            return await _client.PostAsync<PostProjectResponseItem>(item, ApiControllers.ProjectPath);
+        }
+
+        public async Task<PutProjectResponseItem> Put(PutProjectRequestItem item)
+        {
+            return await _client.PutAsync<PutProjectResponseItem>(item, ApiControllers.ProjectPath);
+        }
     }
 }

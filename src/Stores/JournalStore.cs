@@ -21,5 +21,10 @@ namespace BlInfoApiWrapper.Stores
             var path = $"{ApiControllers.JournalPath}/{fromDate:yyyy-MM-dd}/{toDate:yyyy-MM-dd}";
             return await _client.GetAsync<GetJournalResponseItem>(path);
         }
+
+        public async Task<PostJournalResponseItem> PostAsync(PostJournalRequestItem item)
+        {
+            return await _client.PostAsync<PostJournalResponseItem>(item, ApiControllers.JournalPath);
+        }
     }
 }

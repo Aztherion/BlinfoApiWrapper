@@ -27,5 +27,13 @@
         internal const string OrderAllPath = "order/all";
         internal const string DocumentPath = "document";
         internal const string DetailsPath = "details";
+        internal const string PayrollPath = "payroll";
+        internal const string PayrollEmployeePath = "payroll/employee";
+        internal const string PayrollDatePath = "payroll/date";
+        internal const string CostCenterPath = "costcenter";
+        internal const string FinancialYearPath = "financialyear";
+        internal const string FinancialYearDatePath = "financialyear/date";
+        internal const string SchedulePath = "schedule";
+        internal const string ScheduleSchedulePath = "schedule/schedule";
     }
 }

@@ -2,7 +2,7 @@
 
 namespace BlInfoApiWrapper.Dto
 {
-    public class GetArticleResponseItem
+    public class PutArticleRequestItem
     {
         [JsonProperty(PropertyName = "account")]
         public string Account { get; set; }
@@ -73,7 +73,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "weight")]
         public decimal Weight { get; set; }
 
-        public GetArticleResponseItem()
+        public PutArticleRequestItem()
         {
             Account = string.Empty;
             Barcode = string.Empty;

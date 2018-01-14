@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace BlInfoApiWrapper.Dto
@@ -63,13 +61,13 @@ namespace BlInfoApiWrapper.Dto
         public List<GetOrderRowResponseItem> Lines { get; set; }
         [JsonProperty(PropertyName = "name")]
         public string Name { get; set; }
-        [JsonProperty(PropertyName = "noVAT")]
+        [JsonProperty(PropertyName = "noVat")]
         public bool NoVat { get; set; }
         [JsonProperty(PropertyName = "orderRegistrationDate")]
         public string OrderRegistrationDate { get; set; }
         [JsonProperty(PropertyName = "orderType")]
         public string OrderType { get; set; }
-        [JsonProperty(PropertyName = "ourReference")]
+        [JsonProperty(PropertyName = "ourRefrence")]
         public string OurReference { get; set; }
         [JsonProperty(PropertyName = "paymentTermsText")]
         public string PaymentTermsText { get; set; }
@@ -99,7 +97,7 @@ namespace BlInfoApiWrapper.Dto
         public decimal Volume { get; set; }
         [JsonProperty(PropertyName = "weight")]
         public decimal Weight { get; set; }
-        [JsonProperty(PropertyName = "yourReference")]
+        [JsonProperty(PropertyName = "yourRefrence")]
         public string YourReference { get; set; }
         [JsonProperty(PropertyName = "zip")]
         public string Zip { get; set; }
@@ -152,7 +150,7 @@ namespace BlInfoApiWrapper.Dto
         public string ArticleId { get; set; }
         [JsonProperty(PropertyName = "comment")]
         public string Comment { get; set; }
-        [JsonProperty(PropertyName = "deliveredQuantity")]
+        [JsonProperty(PropertyName = "deliveryQuantity")]
         public decimal DeliveredQuantity { get; set; }
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }

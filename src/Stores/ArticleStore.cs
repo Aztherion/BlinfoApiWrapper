@@ -29,5 +29,15 @@ namespace BlInfoApiWrapper.Stores
         {
             return await _client.GetAsync<GetArticleResponseItem>($"{ApiControllers.ArticleAccountPath}/{accountNumber}");
         }
-    }
+
+        public async Task<PostArticleResponseItem> PostAsync(PostArticleRequestItem item)
+        {
+            return await _client.PostAsync<PostArticleResponseItem>(item, ApiControllers.ArticlePath);
+        }
+
+        public async Task<PutArticleResponseItem> PutAsync(PutArticleRequestItem item)
+        {
+            return await _client.PutAsync<PutArticleResponseItem>(item, ApiControllers.ArticlePath);
+        }
+     }
 }

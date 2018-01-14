@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace BlInfoApiWrapper.Dto
 {
-    public class GetAccountResponseItem
+    public class PutAccountResponseItem
     {
         [JsonProperty(PropertyName = "closed")]
         public bool Closed { get; set; }
@@ -19,7 +19,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "vatCode")]
         public string VatCode { get; set; }
 
-        public GetAccountResponseItem()
+        public PutAccountResponseItem()
         {
             Comment = string.Empty;
             Id = string.Empty;

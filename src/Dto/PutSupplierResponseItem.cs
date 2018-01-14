@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace BlInfoApiWrapper.Dto
 {
-    public class GetSupplierResponseItem
+    public class PutSupplierResponseItem
     {
         [JsonProperty(PropertyName = "address1")]
         public string Address1 { get; set; }
@@ -55,7 +55,7 @@ namespace BlInfoApiWrapper.Dto
         [JsonProperty(PropertyName = "zipCode")]
         public string Zipcode { get; set; }
 
-        public GetSupplierResponseItem()
+        public PutSupplierResponseItem()
         {
             Address1 = string.Empty;
             Address2 = string.Empty;
